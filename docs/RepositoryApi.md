@@ -1,6 +1,6 @@
 # focs_gitea.RepositoryApi
 
-All URIs are relative to *http://localhost/git/api/v1*
+All URIs are relative to *https://focs.ji.sjtu.edu.cn/git/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

@@ -40,7 +40,7 @@ class Configuration(object):
             return
 
         # Default Base url
-        self.host = "http://localhost/git/api/v1"
+        self.host = "https://focs.ji.sjtu.edu.cn/git/api/v1"
         # Temp file folder for downloading files
         self.temp_folder_path = None
 
