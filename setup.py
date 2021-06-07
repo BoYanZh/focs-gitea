@@ -3,7 +3,7 @@
 """
     Gitea API.
 
-    This documentation describes the Gitea API.  # noqa: E501
+    This documentation describes the Gitea API.
 
     OpenAPI spec version: 1.14.2+makersmelx+BoYanZh
     
@@ -33,14 +33,12 @@ REQUIRES = [
 setup(
     name=NAME,
     version=VERSION,
-    description="Gitea API.",
-    author_email="",
-    url="",
+    description="Python SDK for FOCS Gitea API.",
+    author="BoYanZh",
+    author_email="bomingzh@sjtu.edu.cn",
+    url="https://github.com/BoYanZh/focs-gitea",
     keywords=["Swagger", "Gitea API."],
     install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True,
-    long_description="""\
-    This documentation describes the Gitea API.  # noqa: E501
-    """
 )
