@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**draft** | **bool** |  | [optional] 
+**html_url** | **str** |  | [optional] 
 **merged** | **bool** |  | [optional] 
 **merged_at** | **datetime** |  | [optional] 
 

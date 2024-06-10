@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **enable_push** | **bool** |  | [optional] 
 **enable_push_whitelist** | **bool** |  | [optional] 
 **enable_status_check** | **bool** |  | [optional] 
+**ignore_stale_approvals** | **bool** |  | [optional] 
 **merge_whitelist_teams** | **list[str]** |  | [optional] 
 **merge_whitelist_usernames** | **list[str]** |  | [optional] 
 **protected_file_patterns** | **str** |  | [optional] 
@@ -23,6 +24,7 @@ Name | Type | Description | Notes
 **require_signed_commits** | **bool** |  | [optional] 
 **required_approvals** | **int** |  | [optional] 
 **status_check_contexts** | **list[str]** |  | [optional] 
+**unprotected_file_patterns** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

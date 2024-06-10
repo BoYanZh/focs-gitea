@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**allow_maintainer_edit** | **bool** |  | [optional] 
 **assignee** | **str** |  | [optional] 
 **assignees** | **list[str]** |  | [optional] 
 **base** | **str** |  | [optional] 

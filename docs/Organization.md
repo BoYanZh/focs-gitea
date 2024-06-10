@@ -5,11 +5,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **avatar_url** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
+**email** | **str** |  | [optional] 
 **full_name** | **str** |  | [optional] 
 **id** | **int** |  | [optional] 
 **location** | **str** |  | [optional] 
+**name** | **str** |  | [optional] 
 **repo_admin_change_team_access** | **bool** |  | [optional] 
-**username** | **str** |  | [optional] 
+**username** | **str** | deprecated | [optional] 
 **visibility** | **str** |  | [optional] 
 **website** | **str** |  | [optional] 
 

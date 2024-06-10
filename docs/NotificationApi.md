@@ -1,6 +1,6 @@
 # focs_gitea.NotificationApi
 
-All URIs are relative to *https://focs.ji.sjtu.edu.cn/git/api/v1*
+All URIs are relative to *https://localhost/git/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **notify_get_list**
-> list[NotificationThread] notify_get_list(all=all, status_types=status_types, since=since, before=before, page=page, limit=limit)
+> list[NotificationThread] notify_get_list(all=all, status_types=status_types, subject_type=subject_type, since=since, before=before, page=page, limit=limit)
 
 List users's notification threads
 
@@ -63,8 +63,9 @@ configuration.api_key['token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = focs_gitea.NotificationApi(focs_gitea.ApiClient(configuration))
-all = 'all_example' # str | If true, show notifications marked as read. Default value is false (optional)
+all = true # bool | If true, show notifications marked as read. Default value is false (optional)
 status_types = ['status_types_example'] # list[str] | Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread & pinned. (optional)
+subject_type = ['subject_type_example'] # list[str] | filter notifications by subject type (optional)
 since = '2013-10-20T19:20:30+01:00' # datetime | Only show notifications updated after the given time. This is a timestamp in RFC 3339 format (optional)
 before = '2013-10-20T19:20:30+01:00' # datetime | Only show notifications updated before the given time. This is a timestamp in RFC 3339 format (optional)
 page = 56 # int | page number of results to return (1-based) (optional)
@@ -72,7 +73,7 @@ limit = 56 # int | page size of results (optional)
 
 try:
     # List users's notification threads
-    api_response = api_instance.notify_get_list(all=all, status_types=status_types, since=since, before=before, page=page, limit=limit)
+    api_response = api_instance.notify_get_list(all=all, status_types=status_types, subject_type=subject_type, since=since, before=before, page=page, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling NotificationApi->notify_get_list: %s\n" % e)
@@ -82,8 +83,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **all** | **str**| If true, show notifications marked as read. Default value is false | [optional] 
+ **all** | **bool**| If true, show notifications marked as read. Default value is false | [optional] 
  **status_types** | [**list[str]**](str.md)| Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned. | [optional] 
+ **subject_type** | [**list[str]**](str.md)| filter notifications by subject type | [optional] 
  **since** | **datetime**| Only show notifications updated after the given time. This is a timestamp in RFC 3339 format | [optional] 
  **before** | **datetime**| Only show notifications updated before the given time. This is a timestamp in RFC 3339 format | [optional] 
  **page** | **int**| page number of results to return (1-based) | [optional] 
@@ -105,7 +107,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **notify_get_repo_list**
-> list[NotificationThread] notify_get_repo_list(owner, repo, all=all, status_types=status_types, since=since, before=before, page=page, limit=limit)
+> list[NotificationThread] notify_get_repo_list(owner, repo, all=all, status_types=status_types, subject_type=subject_type, since=since, before=before, page=page, limit=limit)
 
 List users's notification threads on a specific repo
 
@@ -156,8 +158,9 @@ configuration.api_key['token'] = 'YOUR_API_KEY'
 api_instance = focs_gitea.NotificationApi(focs_gitea.ApiClient(configuration))
 owner = 'owner_example' # str | owner of the repo
 repo = 'repo_example' # str | name of the repo
-all = 'all_example' # str | If true, show notifications marked as read. Default value is false (optional)
+all = true # bool | If true, show notifications marked as read. Default value is false (optional)
 status_types = ['status_types_example'] # list[str] | Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread & pinned (optional)
+subject_type = ['subject_type_example'] # list[str] | filter notifications by subject type (optional)
 since = '2013-10-20T19:20:30+01:00' # datetime | Only show notifications updated after the given time. This is a timestamp in RFC 3339 format (optional)
 before = '2013-10-20T19:20:30+01:00' # datetime | Only show notifications updated before the given time. This is a timestamp in RFC 3339 format (optional)
 page = 56 # int | page number of results to return (1-based) (optional)
@@ -165,7 +168,7 @@ limit = 56 # int | page size of results (optional)
 
 try:
     # List users's notification threads on a specific repo
-    api_response = api_instance.notify_get_repo_list(owner, repo, all=all, status_types=status_types, since=since, before=before, page=page, limit=limit)
+    api_response = api_instance.notify_get_repo_list(owner, repo, all=all, status_types=status_types, subject_type=subject_type, since=since, before=before, page=page, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling NotificationApi->notify_get_repo_list: %s\n" % e)
@@ -177,8 +180,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **owner** | **str**| owner of the repo | 
  **repo** | **str**| name of the repo | 
- **all** | **str**| If true, show notifications marked as read. Default value is false | [optional] 
+ **all** | **bool**| If true, show notifications marked as read. Default value is false | [optional] 
  **status_types** | [**list[str]**](str.md)| Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned | [optional] 
+ **subject_type** | [**list[str]**](str.md)| filter notifications by subject type | [optional] 
  **since** | **datetime**| Only show notifications updated after the given time. This is a timestamp in RFC 3339 format | [optional] 
  **before** | **datetime**| Only show notifications updated before the given time. This is a timestamp in RFC 3339 format | [optional] 
  **page** | **int**| page number of results to return (1-based) | [optional] 
@@ -358,7 +362,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **notify_read_list**
-> notify_read_list(last_read_at=last_read_at, all=all, status_types=status_types, to_status=to_status)
+> list[NotificationThread] notify_read_list(last_read_at=last_read_at, all=all, status_types=status_types, to_status=to_status)
 
 Mark notification threads as read, pinned or unread
 
@@ -414,7 +418,8 @@ to_status = 'to_status_example' # str | Status to mark notifications as, Default
 
 try:
     # Mark notification threads as read, pinned or unread
-    api_instance.notify_read_list(last_read_at=last_read_at, all=all, status_types=status_types, to_status=to_status)
+    api_response = api_instance.notify_read_list(last_read_at=last_read_at, all=all, status_types=status_types, to_status=to_status)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling NotificationApi->notify_read_list: %s\n" % e)
 ```
@@ -430,7 +435,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**list[NotificationThread]**](NotificationThread.md)
 
 ### Authorization
 
@@ -444,7 +449,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **notify_read_repo_list**
-> notify_read_repo_list(owner, repo, all=all, status_types=status_types, to_status=to_status, last_read_at=last_read_at)
+> list[NotificationThread] notify_read_repo_list(owner, repo, all=all, status_types=status_types, to_status=to_status, last_read_at=last_read_at)
 
 Mark notification threads as read, pinned or unread on a specific repo
 
@@ -502,7 +507,8 @@ last_read_at = '2013-10-20T19:20:30+01:00' # datetime | Describes the last point
 
 try:
     # Mark notification threads as read, pinned or unread on a specific repo
-    api_instance.notify_read_repo_list(owner, repo, all=all, status_types=status_types, to_status=to_status, last_read_at=last_read_at)
+    api_response = api_instance.notify_read_repo_list(owner, repo, all=all, status_types=status_types, to_status=to_status, last_read_at=last_read_at)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling NotificationApi->notify_read_repo_list: %s\n" % e)
 ```
@@ -520,7 +526,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**list[NotificationThread]**](NotificationThread.md)
 
 ### Authorization
 
@@ -534,7 +540,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **notify_read_thread**
-> notify_read_thread(id, to_status=to_status)
+> NotificationThread notify_read_thread(id, to_status=to_status)
 
 Mark notification thread as read by ID
 
@@ -588,7 +594,8 @@ to_status = 'read' # str | Status to mark notifications as (optional) (default t
 
 try:
     # Mark notification thread as read by ID
-    api_instance.notify_read_thread(id, to_status=to_status)
+    api_response = api_instance.notify_read_thread(id, to_status=to_status)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling NotificationApi->notify_read_thread: %s\n" % e)
 ```
@@ -602,7 +609,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**NotificationThread**](NotificationThread.md)
 
 ### Authorization
 

@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **html_url** | **str** |  | [optional] 
 **parents** | [**list[CommitMeta]**](CommitMeta.md) |  | [optional] 
 **sha** | **str** |  | [optional] 
+**stats** | [**CommitStats**](CommitStats.md) |  | [optional] 
 **url** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

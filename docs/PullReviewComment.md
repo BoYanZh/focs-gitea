@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **position** | **int** |  | [optional] 
 **pull_request_review_id** | **int** |  | [optional] 
 **pull_request_url** | **str** |  | [optional] 
+**resolver** | [**User**](User.md) |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
 **user** | [**User**](User.md) |  | [optional] 
 

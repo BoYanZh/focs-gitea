@@ -3,13 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**auto_init** | **bool** | Whether the repository should be auto-intialized? | [optional] 
+**auto_init** | **bool** | Whether the repository should be auto-initialized? | [optional] 
 **default_branch** | **str** | DefaultBranch of the repository (used when initializes and in template) | [optional] 
 **description** | **str** | Description of the repository to create | [optional] 
 **gitignores** | **str** | Gitignores to use | [optional] 
 **issue_labels** | **str** | Label-Set to use | [optional] 
 **license** | **str** | License to use | [optional] 
 **name** | **str** | Name of the repository to create | 
+**object_format_name** | **str** | ObjectFormatName of the underlying git repository | [optional] 
 **private** | **bool** | Whether the repository is private | [optional] 
 **readme** | **str** | Readme of the repository to create | [optional] 
 **template** | **bool** | Whether the repository is template | [optional] 
